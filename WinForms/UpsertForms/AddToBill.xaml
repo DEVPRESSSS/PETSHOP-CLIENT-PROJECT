@@ -1,0 +1,246 @@
+﻿<Window x:Class="PetShop.WinForms.UpsertForms.AddToBill"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetShop.WinForms.UpsertForms" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="AddToBill" 
+        Background="Transparent"
+        WindowStyle="None"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Height="300" 
+        Width="400"
+        >
+    <Border Background="White"
+        CornerRadius="10">
+        <Grid>
+
+            <!--<Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            Border for row 0
+            <Border Grid.Row="0"
+             Background="#FF4966"
+             CornerRadius="10,10,0,0"
+             Margin="-1,-1,-1,0"
+               >
+
+                <Button x:Name="CloseBtn"
+             Style="{StaticResource MinimizeButtonStyle}"
+             HorizontalAlignment="Right"
+             Margin="0,0,4,0"
+             Cursor="Hand"
+             Click="CloseBtn_Click"
+                 >
+
+
+                    <Icon:PackIconMaterial 
+                      Kind="Close" 
+                      VerticalAlignment="Center"
+                      Height="10"
+                      HorizontalAlignment="Right"
+                      Width="16"
+              />
+
+                </Button>
+            </Border>
+
+
+            <Border Grid.Row="1">
+
+                <Image Margin="4"
+             Source="D:\ASP_PROJECTS\PetShop\Resources\Logo.jpg">
+
+                </Image>
+
+            </Border>
+
+            Border for row 2
+            <Border Grid.Row="2" >
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0">
+
+
+                        <StackPanel Orientation="Vertical">
+
+                            Firstname
+                            <Label Content="Name"
+                            FontSize="12"
+                            Margin="0,0,0,0" 
+                            Width="271"/>
+
+                            <TextBox x:Name="ProductName" BorderBrush="White" IsReadOnly="True" Height="25"
+                              Width="260" />
+
+                            Lastname
+                            <Label Content="Price"
+                            Margin="0,0,0,0" 
+                            FontSize="12"
+                            Width="271"/>
+
+                            <TextBox x:Name="Price" 
+                              IsReadOnly="True"
+                              Height="25"
+                              FontSize="12"
+                              Width="260" />
+
+                            Gmail
+
+                        </StackPanel>
+
+                    </Border>
+                    <Border Grid.Column="1">
+
+
+                        <StackPanel Orientation="Vertical">
+
+                            <Label Content="Quantity"
+                           Margin="0,0,0,0" 
+                            Width="271"/>
+                            <TextBox x:Name="Quantity" Height="25"
+                              FontSize="12"
+                              Width="260" />
+
+
+
+
+                        </StackPanel>
+
+                    </Border>-->
+
+                <!--</Grid>
+
+
+
+
+            </Border>
+
+            --><!--Border for row 3--><!--
+            <Border Grid.Row="3">
+
+                <Button x:Name="AddToBillBtn" Grid.Column="1" 
+                   Style="{StaticResource SubmitButton}" 
+                   Width="NaN"
+                   Content="AddToBill"
+                   Cursor="Hand"
+                   Click="AddToBillBtn_Click"
+                   BorderThickness="0" 
+                   Margin="10,12,10,12" HorizontalAlignment="Stretch"
+                   />
+
+
+            </Border>-->
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+                <RowDefinition Height="35"/>
+
+                
+                
+            </Grid.RowDefinitions>
+            
+            <!--Header color-->
+            <Border CornerRadius="10,10,0,0" Background="#FF4966">
+
+                <Button x:Name="CloseBtn"
+                   Style="{StaticResource MinimizeButtonStyle}"
+                   HorizontalAlignment="Right"
+                   Margin="0,0,4,0"
+                   Cursor="Hand"
+                   Click="CloseBtn_Click"
+                       >
+
+
+                    <Icon:PackIconMaterial 
+                        Kind="Close" 
+                        VerticalAlignment="Center"
+                        Height="10"
+                        HorizontalAlignment="Right"
+                        Width="16"
+                    />
+
+                </Button>
+
+            </Border>
+            
+            <!--Content-->
+            <Border Grid.Row="1">
+                <StackPanel Orientation="Vertical">
+                    <TextBox Width="120"
+                          Foreground="Green"
+                          FontSize="16"
+                          BorderBrush="White"
+                          BorderThickness="0"
+                          IsReadOnly="True"
+                          FontWeight="Bold"
+                           Text="Current Stock:"
+                          HorizontalAlignment="Right"/>
+
+                    <TextBox x:Name="Stock" Width="81"
+                             Foreground="Green"
+                             FontSize="14"
+                             BorderBrush="White"
+                             BorderThickness="0"
+                             IsReadOnly="True"
+                             FontWeight="Bold"
+                             HorizontalAlignment="Right"/>
+
+                    <TextBlock x:Name="ProductName"
+                         Margin="18"
+                         HorizontalAlignment="Center" 
+                         Foreground="Gray" 
+                         FontSize="26"
+                               />
+
+                    <TextBlock x:Name="Price"
+                           HorizontalAlignment="Center" 
+                           Foreground="Gray" 
+                           FontSize="26"
+                             />
+
+                    <Label Content="Quantity:" Margin="0,10,0,0" Width="158"/>
+                    <TextBox x:Name="Qty"
+                             Height="25"
+                             TextChanged="Qty_TextChanged"
+                             PreviewTextInput="Qty_PreviewTextInput"
+                             PreviewKeyDown="Qty_PreviewKeyDown"
+                             
+                             Width="150"
+                             />
+                </StackPanel>
+           
+            </Border>
+            
+            <!--Footer-->
+            <Border Grid.Row="2">
+                <Button x:Name="AddToBillBtn" Grid.Column="1" 
+                   Style="{StaticResource SubmitButton}" 
+                   Width="NaN"
+                   Content="AddToBill"
+                   Cursor="Hand"
+                   Click="AddToBillBtn_Click_1"
+                   BorderThickness="0" 
+                   HorizontalAlignment="Stretch"
+                   />
+
+            </Border>
+        </Grid>
+
+    </Border>
+</Window>

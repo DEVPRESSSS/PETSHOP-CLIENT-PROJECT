@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="PetShop.UCpages.Billing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PetShop.UCpages" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" 
+             d:DesignWidth="900"
+             Loaded="UserControl_Loaded"
+             Background="Transparent"
+             >
+    <Border
+        Background="White"
+        CornerRadius="10">
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+
+            </Grid.ColumnDefinitions>
+
+            <!--Border for both column-->
+
+            <Border Grid.Column="0"
+                    Margin="2"
+                    >
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0">
+
+                        <!--DatagridView-->
+
+
+                    </Border>
+                    <Border Grid.Row="1" 
+                           >
+                        <!--Products Table-->
+
+                        <DataGrid RowStyle="{DynamicResource DataGridRowStyle1}" 
+                            ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                            CellStyle="{DynamicResource DataGridCellStyle1}" 
+                            x:Name="ProductTable" Style="{DynamicResource DataGridStyle1}"
+                               SelectionChanged="ProductTable_SelectionChanged"
+                             AutoGenerateColumns="False">
+
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn Header="ProductId" CanUserResize="False"  Binding="{Binding ProductId}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="Name" CanUserResize="False"  Binding="{Binding ProductName}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="Category" CanUserResize="False"  Binding="{Binding Category}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="CurrentStock" CanUserResize="False"  Binding="{Binding CurrentStock}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="Price" CanUserResize="False" Binding="{Binding Price, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="*"/>
+
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Border>
+
+                </Grid>
+
+            </Border>
+
+            <!--Border for column 2-->
+            <Border Grid.Column="1"
+                Margin="2"
+                >
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" >
+
+                        <!--DatagridView-->
+                        <DataGrid RowStyle="{DynamicResource DataGridRowStyle1}" 
+                                ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                                CellStyle="{DynamicResource DataGridCellStyle1}" 
+                                x:Name="CartTable" Style="{DynamicResource DataGridStyle1}"
+                                 AutoGenerateColumns="False" 
+                                 Margin="5">
+
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn Header="CartId" CanUserResize="False"  Binding="{Binding CartId}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="Name" CanUserResize="False"  Binding="{Binding Name}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="Price" CanUserResize="False" Binding="{Binding Price, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="Qty" CanUserResize="False"  Binding="{Binding Quantity}" IsReadOnly="True" Width="*"/>
+                                <DataGridTextColumn Header="Total" CanUserResize="False" Binding="{Binding SubTotal, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="*"/>
+
+                                <DataGridTemplateColumn Header="" CanUserResize="False" IsReadOnly="True" Width="*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+
+                                                <Button x:Name="deleteBtn" Margin="5 0 0 0" Style="{StaticResource gridRemoveButton}" Click="deleteBtn_Click"
+                         
+                        >
+                                                    <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource gridButtonIcon}"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Border>
+
+                    <!--Footer with Grand Total, Amount, and Change-->
+                    <Border Grid.Row="2">
+                        <StackPanel Margin="5" HorizontalAlignment="Stretch" Orientation="Vertical">
+                            <!-- Grand Total -->
+                            <TextBlock x:Name="GrandTotalText" 
+                                     Text="Grand Total: ₱0.00" 
+                                     FontSize="16" 
+                                     FontWeight="Bold" 
+                                     Margin="0,0,0,5"
+                                     HorizontalAlignment="Right"/>
+
+                            <!-- Amount Entered -->
+                            <TextBlock Text="Amount: " />
+                            <TextBox x:Name="AmountTextBox" 
+                                   Height="25"
+                                   TextChanged="AmountTextBox_TextChanged"
+                                   HorizontalAlignment="Stretch"
+                                   />
+
+                            <!-- Change -->
+                            <TextBlock x:Name="ChangeText" 
+                                     Text="Change: ₱0.00" 
+                                     FontSize="14" 
+                                     HorizontalAlignment="Right"/>
+
+                            <!-- Checkout Button -->
+                            <Button x:Name="CheckOutBtn" 
+                                 Style="{StaticResource SubmitButton}" 
+                                 Content="Checkout"
+                                 Height="40"
+                                 Margin="0"                                 
+                                 Cursor="Hand"
+                                 Click="CheckOutBtn_Click"
+                                 FontSize="15"
+                                 BorderThickness="0" 
+                                 HorizontalAlignment="Stretch" 
+                                 Width="{Binding RelativeSource={RelativeSource AncestorType=StackPanel}, Path=ActualWidth}"
+
+                                 />
+                        </StackPanel>
+                    </Border>
+
+                </Grid>
+
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

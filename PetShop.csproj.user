@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Authentication\ChangePassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Authentication\ForgotPassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Authentication\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Billing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Cashier\BillinCashier.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Cashier\CashierDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Customer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Employees.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Products.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCpages\Sale.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\AddToBill.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\Category\InsertCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\Category\UpdateCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\Employee\InsertEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\Employee\UpdateEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\Products\InsertProcduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\Products\UpdateProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WinForms\UpsertForms\Receipt\Template.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Authentication\ChangePassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Authentication\ForgotPassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Authentication\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Billing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Cashier\BillinCashier.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Cashier\CashierDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Customer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Employees.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Products.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCpages\Sale.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\AddToBill.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Category\InsertCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Category\UpdateCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Employee\InsertEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Employee\UpdateEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Products\InsertProcduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Products\UpdateProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Receipt\Template.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
