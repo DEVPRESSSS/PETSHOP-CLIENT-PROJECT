@@ -45,7 +45,7 @@ namespace PetShop.WinForms.UpsertForms.Products
                 productId= product.ProductId;
                 ProductName.Text = product.ProductName;
                 Price.Text = product.Price.ToString();
-                Quantity.Text = product.Quantity.ToString();
+                //Quantity.Text = product.Quantity.ToString();
                 ProductName.Text = product.ProductName;
                // Category.SelectedIndex = 1;
 
@@ -58,28 +58,29 @@ namespace PetShop.WinForms.UpsertForms.Products
         private void Save()
         {
             if(!string.IsNullOrWhiteSpace(ProductName.Text) && !string.IsNullOrWhiteSpace(Price.Text)
-                && !string.IsNullOrWhiteSpace(Quantity.Text))
+                )
             {
-                int qty = Convert.ToInt32(Quantity.Text);
+                //int qty = Convert.ToInt32(Quantity.Text);
 
-                if (qty <= 0)
-                {
-                    MessageBox.Show("Qty cant be zero", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                //if (qty <= 0)
+                //{
+                //    MessageBox.Show("Qty cant be zero", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                    return;
-                }
+                //    return;
+                //}
                 try
                 {
                     sqlConnection.Open();
-                    SqlCommand cmd = new SqlCommand("Update ProductTbl set PrName=@PN,PrQty=@PQ,PrPrice=@PP,PrCat=@PC where PrId=@PKey", sqlConnection);
+                    SqlCommand cmd = new SqlCommand("Update ProductTbl set PrName=@PN,PrPrice=@PP,PrCat=@PC where PrId=@PKey", sqlConnection);
                     cmd.Parameters.AddWithValue("@PN", ProductName.Text);
                     cmd.Parameters.AddWithValue("@PC", (ProductCategory.SelectedItem as ComboBoxItem)?.Content.ToString());
-                    cmd.Parameters.AddWithValue("@PQ", Quantity.Text);
+                    //cmd.Parameters.AddWithValue("@PQ", Quantity.Text);
+                    //cmd.Parameters.AddWithValue("@CurrentStock", Quantity.Text);
                     cmd.Parameters.AddWithValue("@PP", Price.Text);
                     cmd.Parameters.AddWithValue("@PKey", productId);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Product Updated successfully", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Product Updated successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
 
 
@@ -87,6 +88,8 @@ namespace PetShop.WinForms.UpsertForms.Products
 
                     ProductUpdated?.Invoke(this, EventArgs.Empty);
                     sqlConnection.Close();
+
+                    DataContext = null;
                     
                 }
                 catch (Exception Ex)

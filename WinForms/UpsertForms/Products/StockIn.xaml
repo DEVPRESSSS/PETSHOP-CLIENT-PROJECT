@@ -1,0 +1,112 @@
+﻿<Window x:Class="PetShop.WinForms.UpsertForms.Products.StockIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetShop.WinForms.UpsertForms.Products" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="StockIn" 
+        WindowStyle="None"
+          WindowStartupLocation="CenterScreen"
+          AllowsTransparency="True"
+          Height="300" 
+        Loaded="Window_Loaded"
+         Background="Transparent"
+          Width="400"
+        >
+    <Border Background="White"
+     CornerRadius="10">
+        <Grid>
+
+
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+                <RowDefinition Height="35"/>
+
+
+
+            </Grid.RowDefinitions>
+
+            <!--Header color-->
+            <Border CornerRadius="10,10,0,0" Background="#FF4966">
+
+                <Button x:Name="CloseBtn"
+                Style="{StaticResource MinimizeButtonStyle}"
+                HorizontalAlignment="Right"
+                Margin="0,0,4,0"
+                Cursor="Hand"
+                Click="CloseBtn_Click"
+                    >
+
+
+                    <Icon:PackIconMaterial 
+                     Kind="Close" 
+                     VerticalAlignment="Center"
+                     Height="10"
+                     HorizontalAlignment="Right"
+                     Width="16"
+                 />
+
+                </Button>
+
+            </Border>
+
+            <!--Content-->
+            <Border Grid.Row="1">
+                <StackPanel Orientation="Vertical">
+
+                    <TextBox x:Name="Stock" Width="81"
+                          Foreground="Green"
+                          FontSize="14"
+                          BorderBrush="White"
+                          BorderThickness="0"
+                          IsReadOnly="True"
+                          FontWeight="Bold"
+                          HorizontalAlignment="Right"/>
+
+                    <TextBlock x:Name="ProductName"
+                      Margin="18"
+                      HorizontalAlignment="Center" 
+                      Foreground="Gray" 
+                      FontSize="26"
+                            />
+
+                    <TextBlock x:Name="Price"
+                        HorizontalAlignment="Center" 
+                        Foreground="Gray" 
+                        FontSize="26"
+                          />
+
+                    <Label Content="Quantity:" Margin="0,10,0,0" Width="158"/>
+                    <TextBox x:Name="Qty"
+                          Height="25"
+                          TextChanged="Qty_TextChanged"
+                          PreviewTextInput="Qty_PreviewTextInput"
+                          PreviewKeyDown="Qty_PreviewKeyDown"
+                          
+                          Width="150"
+                          />
+                </StackPanel>
+
+            </Border>
+
+            <!--Footer-->
+            <Border Grid.Row="2">
+                <Button x:Name="AddStockBtn" Grid.Column="1" 
+                Style="{StaticResource SubmitButton}" 
+                Width="NaN"
+                Content="AddToBill"
+                Cursor="Hand"
+                Click="AddStockBtn_Click"
+                BorderThickness="0" 
+                HorizontalAlignment="Stretch"
+                />
+
+            </Border>
+        </Grid>
+
+    </Border>
+</Window>

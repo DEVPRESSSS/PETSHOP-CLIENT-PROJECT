@@ -9,6 +9,7 @@ namespace PetShop.DatabaseConnection
     public class Connection
     {
 
-        public string ConnectionString ="Server=localhost\\SQLEXPRESS;Database=markDb;Trusted_Connection=True;TrustServerCertificate=True;";
+        //public string ConnectionString ="Server=localhost\\SQLEXPRESS;Database=markDb;Trusted_Connection=True;TrustServerCertificate=True;";
+        public string ConnectionString = "Server=localhost\\LAPTOP-LA0O5NUG\\SQLEXPRESS=markDb;Trusted_Connection=True;TrustServerCertificate=True;";
     }
 }

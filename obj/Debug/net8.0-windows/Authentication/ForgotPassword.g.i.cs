@@ -103,7 +103,7 @@ namespace PetShop.Authentication {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PetShop;V1.0.0.0;component/authentication/forgotpassword.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PetShop;component/authentication/forgotpassword.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Authentication\ForgotPassword.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

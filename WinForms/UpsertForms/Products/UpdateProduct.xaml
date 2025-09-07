@@ -118,7 +118,7 @@
 
                         <StackPanel Orientation="Vertical">
 
-                            <Label Content="Quantity"
+                            <!--<Label Content="Quantity"
                                Margin="0,0,0,0" 
                                 Width="271"/>
                             <TextBox x:Name="Quantity"
@@ -126,7 +126,7 @@
                                      PreviewKeyDown="Quantity_PreviewKeyDown"
                                   Height="25"
                                   FontSize="12"
-                                  Width="260" />
+                                  Width="260" />-->
 
                             <Label Content="Category"
                               Margin="0,0,0,0" Width="271"/>

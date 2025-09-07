@@ -103,7 +103,7 @@ namespace PetShop.UCpages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PetShop;V1.0.0.0;component/ucpages/billing.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PetShop;component/ucpages/billing.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UCpages\Billing.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

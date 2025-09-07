@@ -103,7 +103,7 @@ namespace PetShop.WinForms.UpsertForms.Products {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PetShop;V1.0.0.0;component/winforms/upsertforms/products/insertprocduct.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PetShop;component/winforms/upsertforms/products/insertprocduct.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\WinForms\UpsertForms\Products\InsertProcduct.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

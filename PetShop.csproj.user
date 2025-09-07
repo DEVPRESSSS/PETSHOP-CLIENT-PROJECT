@@ -58,6 +58,9 @@
     <Compile Update="WinForms\UpsertForms\Products\InsertProcduct.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WinForms\UpsertForms\Products\StockIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WinForms\UpsertForms\Products\UpdateProduct.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +121,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WinForms\UpsertForms\Products\InsertProcduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinForms\UpsertForms\Products\StockIn.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WinForms\UpsertForms\Products\UpdateProduct.xaml">

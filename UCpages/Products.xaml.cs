@@ -166,5 +166,30 @@ namespace PetShop.UCpages
                 };
             }
         }
+
+        private void StockIn_Click(object sender, RoutedEventArgs e)
+        {
+
+            var btn = sender as Button;
+            if (btn == null) return;
+
+            var selectedProduct = btn.DataContext as ProductModel;
+            StockIn insertProcduct = new StockIn()
+            {
+                DataContext = selectedProduct
+
+            };
+
+            insertProcduct.ProductUpdated += (s, e) => {
+
+                loadAllProducts();
+            };
+            insertProcduct.ShowDialog();
+        }
+
+        private void StockIn_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

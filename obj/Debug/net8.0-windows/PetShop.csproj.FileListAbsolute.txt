@@ -145,3 +145,5 @@ D:\ASP_PROJECTS\PetShop\obj\Debug\net8.0-windows\Authentication\ChangePassword.b
 D:\ASP_PROJECTS\PetShop\obj\Debug\net8.0-windows\Authentication\ForgotPassword.baml
 D:\ASP_PROJECTS\PetShop\obj\Debug\net8.0-windows\UCpages\Cashier\BillinCashier.baml
 D:\ASP_PROJECTS\PetShop\obj\Debug\net8.0-windows\UCpages\Cashier\CashierDashboard.baml
+D:\ASP_PROJECTS\PetShop\obj\Debug\net8.0-windows\WinForms\UpsertForms\Products\StockIn.g.cs
+D:\ASP_PROJECTS\PetShop\obj\Debug\net8.0-windows\WinForms\UpsertForms\Products\StockIn.baml

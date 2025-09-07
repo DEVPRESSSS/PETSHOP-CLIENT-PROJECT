@@ -111,7 +111,7 @@ namespace PetShop.WinForms.UpsertForms.Employee {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PetShop;V1.0.0.0;component/winforms/upsertforms/employee/insertemployee.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PetShop;component/winforms/upsertforms/employee/insertemployee.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\WinForms\UpsertForms\Employee\InsertEmployee.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -93,7 +93,21 @@
                         <DataGridTextColumn Header="CurrentStock" CanUserResize="False"  Binding="{Binding CurrentStock}" IsReadOnly="True" Width="*"/>
                         <DataGridTextColumn Header="Price" CanUserResize="False" Binding="{Binding Price, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="*"/>
                         <DataGridTextColumn Header="Created" CanUserResize="False" Binding="{Binding DateCreated, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="*"/>
-
+                        <DataGridTemplateColumn Header="" CanUserResize="False" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="StockIn" 
+                                                Content="Add Stock"
+                                                Style="{StaticResource gridEditButton}" 
+                                                Click="StockIn_Click" >
+                                            <!--<Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource gridButtonIcon}"/>-->
+                                        </Button>
+                                
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                         <DataGridTemplateColumn Header="Action" CanUserResize="False" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
